@@ -13,10 +13,10 @@
         android:layout_marginTop="10dp"
         android:background="?android:attr/colorBackground"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gridLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
         <ImageView
             android:id="@+id/body"
@@ -87,82 +87,37 @@
             android:layout_height="match_parent"
             android:visibility="invisible"
             app:srcCompat="@drawable/ears" />
-
-        <ImageView
-            android:id="@+id/eyebrows"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/eyebrows" />
-
-
     </FrameLayout>
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="250dp"
+        android:layout_width="230dp"
         android:layout_height="222dp"
-        android:layout_marginTop="380dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_margin="40dp"
+        app:layout_constraintStart_toEndOf="@+id/potato"
+        app:layout_constraintTop_toTopOf="@+id/potato">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/reset"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:onClick="ButtonOnClick"
-                android:text="Reset:"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="8dp" />
-
-            <CheckBox
-                android:id="@+id/Mustache_box"
-                android:layout_width="110dp"
-                android:layout_height="30dp"
-                android:duplicateParentState="true"
-                android:onClick="checkClicked"
-                android:text="Moustache"
-                app:layout_constraintTop_toBottomOf="@id/reset"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@id/Arms_box"
-                />
-
-            <CheckBox
-                android:id="@+id/Hat_box"
-                android:layout_width="110dp"
-                android:layout_height="30dp"
-                android:onClick="checkClicked"
-                android:text="Hat"
-                app:layout_constraintBottom_toTopOf="@+id/Glasses_box"
-                app:layout_constraintStart_toStartOf="@id/Glasses_box"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintTop_toBottomOf="@+id/reset"
-                />
-
             <CheckBox
                 android:id="@+id/Arms_box"
                 android:layout_width="110dp"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:onClick="checkClicked"
                 android:text="Arms"
                 app:layout_constraintBottom_toTopOf="@+id/Nose_box"
                 app:layout_constraintEnd_toStartOf="@+id/Glasses_box"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Mustache_box"
+                app:layout_constraintTop_toBottomOf="@+id/mustache_box"
                 app:layout_constraintVertical_chainStyle="spread" />
 
             <CheckBox
                 android:id="@+id/Nose_box"
                 android:layout_width="110dp"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:onClick="checkClicked"
                 android:text="Nose"
                 app:layout_constraintBottom_toTopOf="@+id/Eyes_box"
@@ -175,7 +130,7 @@
             <CheckBox
                 android:id="@+id/Eyes_box"
                 android:layout_width="110dp"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:onClick="checkClicked"
                 android:text="Eyes"
                 app:layout_constraintBottom_toTopOf="@+id/Eyebrows_box"
@@ -188,7 +143,7 @@
             <CheckBox
                 android:id="@+id/Eyebrows_box"
                 android:layout_width="110dp"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:onClick="checkClicked"
                 android:text="Eyebrows"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -198,6 +153,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/Eyes_box"
                 app:layout_constraintVertical_chainStyle="spread" />
 
+            <CheckBox
+                android:id="@+id/Hat_box"
+                android:layout_width="110dp"
+                android:layout_height="34dp"
+                android:onClick="checkClicked"
+                android:text="Hat"
+                app:layout_constraintBottom_toTopOf="@+id/Glasses_box"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/mustache_box"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <CheckBox
                 android:id="@+id/Glasses_box"
@@ -208,37 +174,51 @@
                 app:layout_constraintBottom_toTopOf="@+id/Mouth_box"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/Eyebrows_box"
+                app:layout_constraintStart_toEndOf="@+id/Arms_box"
                 app:layout_constraintTop_toBottomOf="@+id/Hat_box" />
+
+            <CheckBox
+                android:id="@+id/mustache_box"
+                android:layout_width="110dp"
+                android:layout_height="34dp"
+                android:duplicateParentState="true"
+                android:onClick="checkClicked"
+                android:text="moustache"
+                app:layout_constraintBottom_toTopOf="@+id/Arms_box"
+                app:layout_constraintEnd_toStartOf="@+id/Hat_box"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <CheckBox
                 android:id="@+id/Mouth_box"
                 android:layout_width="110dp"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:onClick="checkClicked"
                 android:text="Mouth"
                 app:layout_constraintBottom_toTopOf="@+id/Shoes_box"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/Eyebrows_box"
+                app:layout_constraintStart_toEndOf="@+id/Nose_box"
                 app:layout_constraintTop_toBottomOf="@+id/Glasses_box" />
 
             <CheckBox
                 android:id="@+id/Shoes_box"
                 android:layout_width="110dp"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:onClick="checkClicked"
                 android:text="Shoes"
                 app:layout_constraintBottom_toTopOf="@+id/Ears_box"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/Eyebrows_box"
+                app:layout_constraintStart_toEndOf="@+id/Eyes_box"
                 app:layout_constraintTop_toBottomOf="@+id/Mouth_box" />
 
             <CheckBox
                 android:id="@+id/Ears_box"
                 android:layout_width="110dp"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:onClick="checkClicked"
                 android:text="Ears"
                 app:layout_constraintBottom_toBottomOf="parent"
