@@ -9,4 +9,4 @@ Mr-Potatohead is een Android app waar je Mr-Potatohead kleding kan aandoen.
 De app werkt in de normale view en landscape.
 
 
-[![IMAGE ALT TEXT HERE](https://youtu.be/TUAWR_lybFY.jpg)](https://youtu.be/TUAWR_lybFY)
+[![Demo](https://youtu.be/TUAWR_lybFY.jpg)](https://youtu.be/TUAWR_lybFY)
