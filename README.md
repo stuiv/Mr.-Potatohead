@@ -8,4 +8,5 @@ Exercise: Mr-Potatohead
 Mr-Potatohead is een Android app waar je Mr-Potatohead kleding kan aandoen.
 De app werkt in de normale view en landscape.
 
-https://youtu.be/TUAWR_lybFY
+
+[![IMAGE ALT TEXT HERE](https://youtu.be/TUAWR_lybFY.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
