@@ -1,6 +1,7 @@
 # Mr.-Potatohead
 
-Course: Native App Studio\\
+Course: Native App Studio
+
 Exercise: Mr-Potatohead
 
 ## About:
