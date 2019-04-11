@@ -63,14 +63,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-/* This function makes everything invissible again and resets the Checkboxes*/
+/* This function makes everything invisible again and resets the Checkboxes*/
     public void ButtonOnClick(View v) {
 
         for (int Box : checkboxes) {
             ImageChecker(Box).setVisibility(View.INVISIBLE);
             final CheckBox checkBox = (CheckBox) findViewById(Box);
             checkBox.setChecked(false);
-
         }
     }
 
